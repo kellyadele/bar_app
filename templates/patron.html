@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <title>
+       Patron Portal
+    </title>
+</head>
+<body>
+    <div class = "left"><center>
+    <table>
+        <tr>
+            <td onclick="addItem(' Dirty Martini')" class="pink"><h4>Dirty Martini</h4><img src="images/dirty.png" height="100" width="80"></td>
+            <td onclick="addItem(' White Russian') " class="green"><h4>White Russian</h4><img src="images/russian.png" height="100" width="80"></td>
+            <td onclick="addItem(' Malbec')" class="pink"><h4>Malbec</h4><img src="images/redWine.png" height="100" width="80"></td>
+            <td onclick="addItem(' Bud Light')" class="green"><h4>Bud Light</h4><img src="images/budLight.png" height="120" width="40"></td>
+        </tr>
+        <tr>
+            <td onclick="addItem(' Cosmopolitan')" class="green"><h4>Cosmopolitan</h4><img src="images/cosmo.png" height="100" width="80"></td>
+            <td onclick="addItem(' Zombie Brain')" class="pink"><h4>Zombie Brain Shot</h4><img src="images/zombie.png" height="100" width="80"></td>
+            <td onclick="addItem(' Cabernet')" class="green"><h4>Cabernet</h4><img src="images/redWine.png" height="100" width="80"></td>
+            <td onclick="addItem(' Yuengling')" class="pink"><h4>Yuengling</h4><img src="images/yuengling.png" height="120" width="40"></td>
+        </tr>
+         <tr>
+            <td onclick="addItem(' Margarita')" class="pink"><h4>Margarita</h4><img src="images/margarita.png" height="100" width="80"></td>
+            <td onclick="addItem(' Irish Coffee')" class="green"><h4>Irish Coffee</h4><img src="images/creme.png" height="100" width="80"></td>
+            <td onclick="addItem(' Chardonnay')" class="pink"><h4>Chardonnay</h4><img src="images/whiteWine.png" height="100" width="80"></td>
+            <td onclick="addItem(' Corona')" class="green"><h4>Corona</h4><img src="images/corona.png" height="120" width="60"></td>
+            
+        </tr>
+        <tr>
+            <td onclick="addItem(' Manhattan')" class="green"><h4>Manhattan</h4><img src="images/manhattan.png" height="100" width="80"></td>
+            <td onclick="addItem(' B-52')" class="pink"><h4>B-52 Shot</h4><img src="images/b52.png" height="100" width="80"></td>
+            <td onclick="addItem(' Champagne')" class="green"><h4>Champagne</h4><img src="images/champagne.png" height="110" width="60"></td>
+            <td onclick="addItem(' Michelob Ultra')" class="pink"><h4>Michelob Ultra</h4><img src="images/ultra.png" height="120" width="60"></td>
+            </tr>
+    </table>
+    </center>
+    </div>
+    <div class="right">
+        <h1> <?php session_start(); echo $_SESSION['patron']; ?>, choose your drinks from the drink menu.<br> See them below.</h1>
+      <form action="patron.php" method="post"><textarea id="drinkList" name ="drinkList" rows = "20" columns="15" readonly></textarea>
+    <h2>Press submit when your order is complete.</h2><button type="submit" onclick="submitDrinks()" class="button">Submit</button></form>
+        
+    </div>
+</body>
+</html>
