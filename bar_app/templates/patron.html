@@ -4,11 +4,11 @@
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="site.css">
     <title>
-       Patron Portal
+       Patron Portal Testing the PUsh
     </title>
 </head>
 <body>
-    <div class = "left"><center>
+    <div class = "left"><div style="text-align: center;">
     <table>
         <tr>
             <td onclick="addItem(' Dirty Martini')" class="pink"><h4>Dirty Martini</h4><img src="images/dirty.png" height="100" width="80"></td>
@@ -36,7 +36,7 @@
             <td onclick="addItem(' Michelob Ultra')" class="pink"><h4>Michelob Ultra</h4><img src="images/ultra.png" height="120" width="60"></td>
             </tr>
     </table>
-    </center>
+    </div>
     </div>
     <div class="right">
         <h1> <?php session_start(); echo $_SESSION['patron']; ?>, choose your drinks from the drink menu.<br> See them below.</h1>
